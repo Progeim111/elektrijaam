@@ -3,7 +3,7 @@ export class Maksestaatus {
         private _paymentStatus: boolean,
         private _dueDate: Date,
         private _paidAmount: number,
-        private _paymentDate: Date
+        private _paymentDate: Date | null 
     ) {}
 
     get paymentStatus() {
@@ -34,7 +34,7 @@ export class Maksestaatus {
         return this._paymentDate;
     }
 
-    set paymentDate(newPaymentDate: Date) {
+    set paymentDate(newPaymentDate: Date | null) { 
         this._paymentDate = newPaymentDate;
     }
 }
